@@ -1,0 +1,227 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/Roboto-Regular.ttf') ;
+  }
+body{
+    font-family: Roboto;
+    position: relative;
+}
+.img-back{
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0,.8);
+}
+/* buttons */
+main input[type='button']{
+    outline: none;
+    font-size: 13px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 29px;
+    border-radius: 50px;
+    transition:background 1s ease-in-out ,color .7s ease-in-out,transform 1s ease-in-out;
+}
+main input[type='button']:hover{
+    transform: translateY(-5px);
+}
+main input[type="button"]:nth-child(1):hover{
+    color: black;
+    background: white;
+}
+main input[type='button']:nth-child(2):hover{
+    background: transparent;
+}
+main input[type='button']:nth-child(2){
+    margin-left: 40px;
+    border-color: orange;
+    box-shadow: 0px 2px 8px orange;
+    background: orange;
+}
+li{list-style-type: none;}
+a{text-decoration: none;}
+article{
+    position: relative;
+    padding: 2.2% 2.40%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1222;
+    min-height: 100vh;
+}
+/* nav */
+article nav{
+    display: flex;
+    align-items: center;
+}
+article nav .menu-info{
+    margin-right: auto;
+}
+article nav .menu-info .lado-a{
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 40px;
+}
+article nav .menu-info .lado-a h1{
+    font-size: 30px;
+    margin-left: 7px;
+}
+article nav ul{
+    display: flex;
+    align-items: center;
+}
+article nav ul li a{
+    margin: 15px ;
+    padding: 10px 10px;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    font-weight: 700;
+    transition:all 1s;
+    position: relative;
+}
+article nav ul li{
+    transition:all 1s ease-in-out;
+}
+article nav ul li:hover{
+    transform: translateY(-10px);
+}
+article nav ul li a::after{
+    content: '';
+    position: absolute;
+    transition: all 1s ease;
+    bottom: 0%;
+    left:  0;
+    height: 2px;
+    width: 00%;
+    background: orange;
+}
+article nav ul li a:hover:after{
+    width: 100%;
+}
+/* section */
+article section{
+    padding: 0% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+}
+article section h1{
+    font-size: 5rem;
+    text-transform: capitalize;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+article section p{
+    font-size: 17px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: 1.2px;
+}
+article section p span{
+    color: orange;
+    letter-spacing: 1.2px;
+}
+article section main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+article section main input[type='button']{
+    outline: none;
+    font-size: 15px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+article section main input[type='button']:nth-child(2){
+    margin-left: 40px;
+    border-color: orange;
+    box-shadow: 0px 2px 8px orange;
+    background: orange;
+}
+
+/* footer */
+
+article footer{
+    padding:0 0 1.2% 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+article footer .card{
+    padding: 4px;
+}
+article footer .card .line{
+    margin: 21px 0;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+article footer .card .line .l {
+    align-items: center;
+    display: flex;
+}
+article footer .card .line .l .f{
+    margin: 3px;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50px;
+}
+article footer .card .line .l small{
+    color: white;
+    font-size: 15px;
+    margin-left: 7px;
+}
+article footer .card .line .l i{
+    color: white;
+    font-size: 15px;
+}
+
+article footer .card .line .l span{
+    color: orange;
+    font-size: 15px;
+    margin-left: 7px;
+}
+
+article footer .card .line:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+}
+article footer .card .line:nth-child(2) .l span{
+    margin:0 8px;
+}
+
+/* min width */
+@media screen and (min-width:850px){
+    article footer .card-container{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    article footer .card{
+        margin-left: 80px;
+    }
+}
